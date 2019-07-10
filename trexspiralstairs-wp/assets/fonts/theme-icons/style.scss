@@ -1,0 +1,145 @@
+@import "variables";
+
+@font-face {
+  font-family: 'theme-icons';
+  src:
+    url('#{$icomoon-font-path}/theme-icons.ttf?7zl0i0') format('truetype'),
+    url('#{$icomoon-font-path}/theme-icons.woff?7zl0i0') format('woff'),
+    url('#{$icomoon-font-path}/theme-icons.svg?7zl0i0#theme-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'theme-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  display: inline-block;
+}
+
+.icon-download {
+  &:before {
+    content: $icon-download; 
+  }
+}
+.icon-open-external {
+  &:before {
+    content: $icon-open-external; 
+  }
+}
+.icon-quote {
+  &:before {
+    content: $icon-quote; 
+  }
+}
+.icon-trex-arrow-right {
+  &:before {
+    content: $icon-trex-arrow-right; 
+  }
+}
+.icon-chevron-left-filled {
+  &:before {
+    content: $icon-chevron-left-filled; 
+  }
+}
+.icon-instagram {
+  &:before {
+    content: $icon-instagram; 
+  }
+}
+.icon-linkedin {
+  &:before {
+    content: $icon-linkedin; 
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook; 
+  }
+}
+.icon-twitter {
+  &:before {
+    content: $icon-twitter; 
+  }
+}
+.icon-envelope {
+  &:before {
+    content: $icon-envelope; 
+  }
+}
+.icon-phone {
+  &:before {
+    content: $icon-phone; 
+  }
+}
+.icon-bars {
+  &:before {
+    content: $icon-bars; 
+  }
+}
+.icon-navicon {
+  &:before {
+    content: $icon-navicon; 
+  }
+}
+.icon-reorder {
+  &:before {
+    content: $icon-reorder; 
+  }
+}
+.icon-chevron-left {
+  &:before {
+    content: $icon-chevron-left; 
+  }
+}
+.icon-chevron-right {
+  &:before {
+    content: $icon-chevron-right; 
+  }
+}
+.icon-close {
+  &:before {
+    content: $icon-close; 
+  }
+}
+.icon-search {
+  &:before {
+    content: $icon-search; 
+  }
+}
+.icon-arrow-right {
+  &:before {
+    content: $icon-arrow-right; 
+  }
+}
+.icon-arrow-left {
+  &:before {
+    content: $icon-arrow-left; 
+  }
+}
+.icon-arrow-down {
+  &:before {
+    content: $icon-arrow-down; 
+  }
+}
+.icon-arrow-up {
+  &:before {
+    content: $icon-arrow-up; 
+  }
+}
+.icon-elipsis {
+  &:before {
+    content: $icon-elipsis; 
+  }
+}
+

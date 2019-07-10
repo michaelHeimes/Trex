@@ -1,0 +1,41 @@
+$FontPath: "../fonts/archer/";
+
+@font-face {
+  font-family: 'archer';
+  src:  url('#{$FontPath}archer-light-webfont.woff2') format('woff2'),
+        url('#{$FontPath}archer-light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'archer';
+  src:  url('#{$FontPath}archer-book-webfont.woff2') format('woff2'),
+        url('#{$FontPath}archer-book-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'archer';
+  src:  url('#{$FontPath}archer-medium-webfont.woff2') format('woff2'),
+        url('#{$FontPath}archer-medium-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'archer';
+  src:  url('#{$FontPath}archer-semibold-webfont.woff2') format('woff2'),
+        url('#{$FontPath}archer-semibold-webfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'archer';
+  src:  url('#{$FontPath}archer-bold-webfont.woff2') format('woff2'),
+        url('#{$FontPath}archer-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
