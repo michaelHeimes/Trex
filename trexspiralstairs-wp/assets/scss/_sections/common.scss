@@ -1,0 +1,601 @@
+/**
+ * GENERAL TAG STYLES
+ *
+ * Any global style overrides 
+ */
+ 
+ a.phone_number, a.email, .site-footer #contact-bar #contact-bar-right a {
+	font-size: 0.6875rem;
+	padding: 8px;	
+	&:hover {
+		color: $green;
+	}
+}
+
+a.phone_number {
+	i {
+		position: relative;
+		top: 1px;
+		margin-right: 10px;
+	}	
+}
+ 
+ .wow {
+	 visibility: hidden;
+ }
+ 
+ .reveal-overlay.no-overlay {
+	 background: transparent;
+ }
+ 
+ .reveal {
+	 overflow-y: auto !important;
+	 -webkit-overflow-scrolling: touch !important;
+ }
+ 
+ .error404 #content {
+	 margin-top: 3em;
+	 min-height: 0;
+ }
+
+@include breakpoint (small only) { 
+	.mobile-fw {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+	
+	.grid-margin-x > .small-12.mobile-fw {
+		width: 100%;
+	}
+}
+
+.canvas-wrapper {
+    position: relative;
+    min-height: auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    @include global-transition;
+}
+
+blockquote {
+    width: auto;
+    padding: 0;
+    margin-bottom: 2rem;
+
+    p {
+        font-family: $font-serif;
+        margin-bottom: 0;
+
+        cite, .cite {
+            font-family: $font-alt;
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: 500;
+        }
+    }
+}
+
+sup {
+    top: -0.3em;
+}
+
+::selection {
+    background: $brand-primary;
+    background: transparent;
+}
+
+// foundation model close button
+.close-button {
+    outline: none;
+//     font-size: 3.5em;
+    right: 1rem;
+    top: 1rem;
+    z-index: 2;
+    
+    i {
+	    font-size: 3.2rem;
+    }
+}
+
+.close-button-wrap {
+    position: absolute;
+    right: 0.5vw;
+    top: 3vh;
+}
+
+button.close-button {
+    background: transparent;
+    padding: 4px;
+    border: 0;
+    line-height: 1;
+    display: flex;
+    top: 0;
+	right: 0;
+	
+	&:hover {
+		background-color: transparent;
+		border: 0;	
+	}
+    
+    i {
+	    color: #999999;
+	    margin: 0;
+    }
+}
+
+// foundation shrink fix for small
+@include breakpoint(small down) {
+    .grid-x > .shrink {
+        width: fit-content;
+    }
+}
+
+
+/**
+ * TYPOGRAPHY
+ */
+
+h1, .h1 {
+    margin-bottom: 2rem;
+    line-height: 1.1em;
+    font-family: $font-serif;
+    font-weight: 400;
+}
+
+h2, .h2 {
+    font-family: $font-alt;
+    text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 500;
+	font-family: $font-gotham;
+}
+
+.light-gray-title {
+	font-size: 0.8125rem;
+    font-weight: 500;
+    text-align: center;
+    color: $button-grey;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/**
+ * LAYOUT
+ * 
+ * General styles for content layout
+ */
+
+#content {
+    min-height: 0;
+    position: relative;
+    z-index: 2;
+
+    main {
+        position: relative;
+        top: 0;
+        z-index: 9;
+
+        /* padding-bottom: calc(5rem + #{$header-height});*/
+
+        > section:first-child, > section:first-of-type {
+            margin-top: 1rem;
+            margin-bottom: 0;
+
+            @include breakpoint(small down) {
+                margin-top: 1rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+/**
+ * COLORS
+ */
+
+.blue {
+    color: $brand-blue;
+}
+
+/**
+ * BUTTONS
+ */
+
+button, .button, button.button, .alm-btn-wrap .alm-load-more-btn, a.builder-link.single-product-builder-link {
+    border: 1px solid $green;
+    background-color: $green;
+    color: $white;
+    border-radius: 0;
+    padding: 2.4em 7.174em 2.3em;
+    font-size: 0.75rem;
+    line-height: 1;
+    font-family: $font-gotham;
+    font-weight: 500;
+    text-transform: uppercase;
+    outline: none;
+    
+    &:hover {
+	    background-color: $button-grey;
+		border: 1px solid $button-grey;
+    }
+
+    @include global-transition;
+
+    i {
+        vertical-align: middle;
+        font-size: 0.6rem;
+        margin-left: 0.5rem;
+    }
+}
+
+a.grey-button, a.builder-link.single-product-builder-link.grey-button {
+	background: $button-grey;
+	border-color: $button-grey;
+	&:hover {
+		background: $green;
+		border-color: $green;
+	}
+}
+
+.button-arrow {
+    &:hover {
+        i {
+            margin-left: 2rem;
+
+            @include global-transition;
+        }
+    }
+
+    i {
+        vertical-align: middle;
+        font-size: 0.7rem;
+        margin-left: 0.5rem;
+    }
+}
+
+button.alm-load-more-btn.more.done {
+	display: none;
+}
+
+/**
+ * BOXES (ticky tacky)
+ */
+
+.box-minimal {
+    margin-bottom: 6em;
+
+    @include breakpoint(small down) {
+        margin-bottom: 3em;
+    }
+}
+
+/**
+ * WIDGETS AND PLUGINS
+ */
+
+// section background images
+// loaded by b-lazy*/
+div.bg-image {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    /*transition: all 0.5s ease-out;*/
+    opacity: 0;
+
+    + .container {
+        z-index: 10;
+        position: relative;
+    }
+}
+
+.bg-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: none;
+
+    /*background-position: center;*/
+    > img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+/**
+ * ROWS FOR BG
+ * Background grid when you need to have fluid boxes for content
+ */
+.row-bg {
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+
+    @include breakpoint(small down) {
+        display: none;
+
+        div[data-equal-watch] {
+            height: 0 !important;
+        }
+    }
+
+
+    .bg-white {
+        background-color: $white;
+    }
+
+    .bg-white-half {
+        background: -moz-linear-gradient(left, #fff 50%, rgba(255, 255, 255, 0) 51%);
+
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, #fff 50%, rgba(255, 255, 255, 0) 51%);
+
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, #fff 50%, rgba(255, 255, 255, 0) 51%);
+    }
+
+    + .row {
+        position: relative;
+        z-index: 10;
+    }
+
+    .row {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/**
+ * B-LAZY
+ */
+
+// transistion for all b-lazy images and backgrounds
+.b-lazy {
+    opacity: 0;
+
+    @include global-transition;
+
+    &.b-loaded {
+        opacity: 1;
+    }
+}
+
+/**
+ * Ajax loader
+ */
+.ajax-loader {
+    // ajax reveals
+    .reveal & {
+        text-align: center;
+        width: 100%;
+        display: block;
+        font-size: 1rem;
+        color: $brand-secondary;
+    }
+}
+
+// Customizations for takeover
+
+.takeover {
+    background-color: rgba(255, 255, 255, 1);
+
+
+    // close button
+
+    .toggle-takeover {
+        color: #999;
+        padding: 0;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+
+        i {
+            font-size: 3.2rem;
+        }
+    }
+
+    .takeover-content {
+        padding: 2rem;
+
+        .grid-x {
+            position: relative;
+        }
+    }
+}
+
+
+/**
+ * CSS Arrows
+ * http://apps.eky.hk/css-triangle-generator/
+ */
+.arrow-right {
+    display: inline-block;
+    height: 2px;
+    background-color: $brand-primary;
+    min-width: 2rem;
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        right: -5px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 0 5px 9px;
+        border-color: transparent transparent transparent $brand-primary;
+    }
+}
+
+.arrow-left {
+    display: inline-block;
+    height: 2px;
+    background-color: $brand-primary;
+    min-width: 2rem;
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: -5px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 9px 5px 0;
+        border-color: transparent $brand-primary transparent transparent;
+    }
+}
+
+.arrow-down {
+    display: inline-block;
+    width: 2px;
+    background-color: $brand-primary;
+    min-height: 2rem;
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 9px 5px 0 5px;
+        border-color: $brand-primary transparent transparent transparent;
+    }
+}
+
+/**
+ * Article Styles
+ */
+article {
+    .size-xlarge {
+        @include breakpoint(large up) {
+            width: 60vw;
+            position: relative;
+            left: 20%;
+            right: 20%;
+            margin-left: -20vw;
+            margin-right: -20vw;
+            max-width: none;
+        }
+    }
+
+    .size-xwide {
+        @include breakpoint(large up) {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            max-width: none;
+        }
+    }
+}
+
+/**
+ * Slick Styles
+ */
+[data-slick] {
+    margin-bottom: 2rem;
+
+    figure {
+        img {}
+
+        figcaption {
+            padding-top: 0.5rem;
+            text-align: center;
+            color: $dark-gray;
+            font-size: 0.9rem;
+        }
+    }
+
+    .slick-arrow {
+        font-size: 0;
+        line-height: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        outline: none;
+        height: 14rem;
+        width: 6rem;
+        cursor: pointer;
+        z-index: 99;
+        background-color: transparent;
+        color: $medium-gray;
+
+        &:before {
+            font-family: 'theme-icons' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 3rem;
+
+            @include global-transition;
+        }
+
+        &:hover {
+            &:before {
+                color: $dark-gray;
+            }
+        }
+    }
+
+    .slick-prev {
+        left: -5rem;
+
+        &:before {
+            content: $icon-chevron-left;
+        }
+    }
+
+    .slick-next {
+        right: -5rem;
+
+        &:before {
+            content: $icon-chevron-right;
+        }
+    }
+}
+
+/**
+ * Progress Indicator for Barba
+ * Based on Pace but uses greensock
+ */
+.barba-progress {
+    background: $brand-primary;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    height: 2px;
+}

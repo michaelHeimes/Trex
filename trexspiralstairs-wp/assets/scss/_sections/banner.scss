@@ -1,0 +1,106 @@
+// Banner
+.home #banner-wrap {
+    min-height: 80vh;
+    @media screen and (min-height:800px) {
+		min-height: 780px;	    
+    }
+}
+
+#banner-wrap {
+	overflow: hidden;
+    min-height: 450px;
+    min-height: 28.16vw;
+    min-height: 35vw;
+    max-height: 450px;
+    position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	@include breakpoint (xlarge) {
+    	min-height: 28.16vw;
+	}
+}
+.banner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#banner-text-overlay {
+	position: relative;
+	text-align: center;
+	color: $white;
+	padding: 3em 0.8em;
+	
+	.button {
+	    margin-left: 0.45em;
+		margin-right: 0.45em;		
+		padding: 1.8em 2.4em;	
+	}
+	
+	.button.banner-link {
+		width: 173px;
+	}
+}
+
+#banner_title {
+	p, h1, h2, h3, h4, h5, h6 {
+		font-size: 2.6875rem;
+		font-weight: 500;
+		line-height: 1;
+	}
+	
+}
+
+.home #banner_title {
+	p, h1, h2, h3, h4, h5, h6 {
+		font-size: 3rem;
+		margin-bottom: 2.2rem;
+	}
+	
+	@include breakpoint (smedium) {
+		p, h1, h2, h3, h4, h5, h6 {
+			font-size: 3.75rem;
+			margin-bottom: 5.2rem;
+		}		
+	}
+	
+}
+
+#banner_sub_title {
+	p, h1, h2, h3, h4, h5, h6 {
+		font-size: 0.8125rem;
+		font-weight: 500;
+		line-height: 1;
+		margin-bottom: 0;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+	}
+	
+}
+
+.home #banner_sub_title {
+	p, h1, h2, h3, h4, h5, h6 {
+		font-size: 2rem;
+		font-weight: 500;
+		letter-spacing: 0;
+		text-transform: none;
+			@include breakpoint (smedium) {
+			p, h1, h2, h3, h4, h5, h6 {
+				font-size: 2.25rem;			
+			}
+		}
+	}
+	
+	strong {
+		color: #8c9b98;
+	}
+	
+}

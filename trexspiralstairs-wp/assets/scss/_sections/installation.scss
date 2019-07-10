@@ -1,0 +1,190 @@
+.installation-title{
+    padding-top: 7.05em;
+}
+
+#steps-wrap {
+	max-width: $content-width;
+	margin: auto;
+	padding: 0;
+	padding-top: 3.3em;
+    margin-bottom: 6.8em;
+	justify-content: center;
+
+	
+	.single_step {
+		position: relative;
+		cursor: pointer;
+	    border: 0.35em solid #fff;
+
+		@include breakpoint (smedium) { 
+	    	width: grid-column(5 of 10);
+	    }
+	    
+		@include breakpoint (mobile) { 
+	    	width: grid-column(1 of 5);
+	    }
+	    
+	    .step-mask {
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    bottom: 0;
+		    left: 0;
+		    background: rgba(0,0,0,0.5);
+	    }
+	    
+	    .step-text {
+		    color: #f9f9f9;
+		    position: absolute;
+		    left: 20px;
+		    right: 20px;
+		    bottom: 0;
+		    z-index: 1;
+		    
+		    span {
+			    font-size: 1.375rem;
+			    font-weight: 600;
+		    }
+		    
+		    i {
+			    font-size: 1.5rem;
+		    }
+	    }
+	    
+	    .step-reveal {
+		    opacity: 0;
+			@include global-transition;
+	    }
+	    
+	    &:hover {
+		    .step-reveal {
+		    	opacity: 1;
+		    }
+	    }
+	}
+}
+
+.reveal {
+	text-align: center;
+}
+
+.page-template-template-installation .reveal {
+	padding-top: 5vh;
+	background: transparent;
+	border: 0;
+	position: relative;
+	text-align: center;
+	justify-content: center;
+	display: flex;
+	
+	.img-wrap {
+		position: relative;
+		text-align: center;
+		
+		p {
+			color: #f9f9f9;
+			font-weight: 300;
+			font-size: 1rem;
+			padding-top: 1.25em;
+			margin-bottom: 0;	
+		}
+		
+	.close-button-wrap {
+		text-align: right;
+		top: 0;
+		right: 0;
+		
+		@include breakpoint (medium) {
+	    	right: 0;
+			top: -6vh;
+		}
+	
+		button.close-button {
+			position: static;
+	   		display: inline-block;
+	   		@media screen and (min-width:678px) {
+	   			margin-right: -2em;
+	   		}
+	   		
+   		}
+		
+		}
+	}
+	
+	i {
+		color: #f9f9f9;
+	}
+	
+}
+
+button.button.modal-nav {
+	position: absolute;
+	color: #f9f9f9;
+	background-color: transparent;
+	border: 0;
+	padding: 0.5em;
+	display: none;
+	top: 50%;
+	transform: translateY(-50%);
+	
+	@include breakpoint (mobile) {
+		display: block;
+	}
+	
+	i {
+		color: #f9f9f9;
+		font-size: 3.25rem;
+	}
+}
+
+.step-before {
+	top: 50%;
+	left: -10em;
+}
+
+.step-after {
+	top: 50%;
+	right: -10em;
+}
+
+#notes {
+	background: $light-grey;
+	margin-top: 1em;
+	margin-bottom: 6.65em;
+	padding-bottom: 5.8em;
+	
+	h2 {
+		padding-top: 7.5em
+	}
+	
+	ul {
+	color: #989d9c;
+	font-size: 1rem;
+	font-weight: 500;
+	max-width: 1130px;
+	margin: 4.2em auto 5.9em;
+	padding: 0 1.1em;
+	list-style: none;
+		@include breakpoint (mobile) {
+			column-count: 2;
+			column-gap: 2em;
+		}
+    
+	    li {
+		    padding-left: 13px;
+			position: relative;
+			margin-bottom: 1em;
+			
+			&:before {
+				font-size: 1.25rem;
+				line-height: 1;
+			    content: "■";
+			    position: absolute;
+			    top: -1px;
+			    left: -13px;
+			}
+	     }
+	}
+}
+
+

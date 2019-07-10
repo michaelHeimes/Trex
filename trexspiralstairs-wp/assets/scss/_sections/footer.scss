@@ -1,0 +1,154 @@
+.page-template-template-models .expert-contact {
+	padding-top: 7.75em;
+}
+
+.expert-contact {
+	> div {
+		text-align: center;
+		justify-content: center;
+		padding-bottom: 5em;
+    }
+    
+    p.expert-contact-label {
+	    margin-bottom: 50px;
+    }
+    
+    a { 
+		max-width: 216px;
+    	min-width: 216px;
+   	    background-color: $dark-grey;
+	    color: $light-grey;
+	    margin: 0 0.5em 0.5em;
+	    padding: 1.278em 1.274em 1.26em;
+	    @include global-transition;
+	    &:hover {
+		    background-color: $button-grey;
+	    }
+	 	i {
+			margin-right: 8px;
+		}
+    }
+}
+
+.site-footer {
+    position: relative;
+    z-index: 1;
+    padding: 1em 0 3.8em;
+    background-color: $black;
+    color:#fff;
+    @include breakpoint (medium) {
+   		padding: 4.95em 0 3.8em;
+    }
+    
+    .footer-bg {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: center;
+    }
+    
+    .grid-container {
+	    position: relative;
+	    
+	    .grid-x {
+		    align-items: center;
+	    }
+	    
+	    .logo a img {
+    		max-width: 241px;
+		}
+		
+    }
+    
+    #contact-bar {
+    	max-width: 1116px;
+        padding-top: 2.1em;
+    	
+    	@include breakpoint (medium) {
+	    	margin: 14.5em auto 0;
+	    	border-top: 1px solid rgba(244,246,245,0.3);
+	    	
+    	}
+    	
+    	#contact-bar-right {
+
+			a {
+				display: block;
+			    text-align: center;	  
+			 	&:hover {
+				    color: $green;
+				}
+			    
+			    @include breakpoint (medium) {
+				    display: inline;
+				    margin-right: 29px;
+			    }  	
+			}	    	
+	    	
+	    	p {
+				font-size: 0.6875rem;
+				padding: 8px;	
+				text-align: center;
+				@include breakpoint (medium) {
+					text-align: left;
+					display: inline-block;
+					margin-bottom: 0;
+				}
+			}
+    	}
+    	
+    	
+
+    	
+	    #social_links-wrap {
+		    text-align: center;
+		    margin-bottom: 0.5em;
+		    @include breakpoint (medium) {
+			    text-align: right;
+			    margin-bottom: 0;
+		    }
+		    
+		    a { 
+			    padding: 4px;
+			    margin-left: 21px;
+			    &:first-child {
+				    margin-left: 0;
+			    }
+			    i {
+				    position: relative;
+				    top: 4px;
+				}
+			    &:hover {
+				    color: $green;
+			    }
+			}
+	    }
+	    
+	    a, p {
+			margin: 0.5em auto;
+		}
+	    
+	    @include breakpoint (medium) { 
+		    a.phone_number {
+			    margin-top: 0;
+			    margin-bottom: 0;
+			}
+		    
+		    #social_links-wrap {
+		    text-align: right;
+			    a {
+				    margin-left: 21px;
+		    	}
+			}
+		}
+	}
+    
+
+}
+
+
+

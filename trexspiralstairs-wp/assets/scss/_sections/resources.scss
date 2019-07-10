@@ -1,0 +1,88 @@
+.resources-title{
+    padding-top: 7.05em;
+}
+
+.resources-wrap {
+	padding-top: 3.2em;
+	margin-bottom: 6.84em;
+    justify-content: center;
+}
+
+a.single-resource.text-center {
+	min-width: 264px;
+    max-width: 264px;
+    padding: 4.5em 1em 2.6em;
+    margin-left: 0.34em;
+    margin-right: 0.34em;
+    margin-bottom: 0.68em;
+    color: #f9f9f9;
+    background: $button-grey;
+    
+    &:hover {
+	    background: $body-color;
+    }
+    
+    i {
+	    display: block;
+		font-size: 6.25rem;
+		padding-bottom: 0.7em;
+    }
+    
+    span {
+	    font-size: 1.125rem;
+	    font-weight: 500;
+	    color: #f9f9f9;
+    }
+    
+}
+
+#faq-accordian-wrap {
+	max-width: 1141px;
+	background: $light-grey;
+	justify-content: center;
+	padding-top: 5.8em;
+	padding-bottom: 7em;
+	margin-bottom: 5.95em;
+	
+	h2 {
+		width: 100%;
+	    margin-bottom: 4.3em;
+	}
+	
+	#faq-accordian {
+		max-width: 665px;
+		list-style: none;
+		margin: 0;
+		font-weight: 500;
+		
+		.accordion-title:hover, .accordion-title:focus {
+			background-color: $light-grey;
+		}
+		
+		.accordion-title {
+			border: 0;
+			color: #989d9c;
+			font-size: 1rem;
+			line-height: 1.4;
+			padding: 1rem 2.35rem;
+		}
+		
+		.accordion-item.is-active a {
+			color: $body-color;
+		}
+		
+		.accordion-content {
+			border: 0;
+			background: $light-grey;
+			padding: 1rem 2.35rem;
+		}
+		
+		.accordion-title::before {
+			font-size: 2.3rem;
+			top: 0.6rem;
+			left: 0;
+			right: auto;
+		}
+	}
+
+}

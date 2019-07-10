@@ -1,0 +1,68 @@
+#about-copy-wrap {
+	background: $light-grey;
+	overflow: hidden;
+	padding-top: 5em;
+	
+	#about-copy {
+		max-width: 799px;
+		margin: auto;
+		color: #989d9c;
+		font-weight: 500;
+		text-align: justify;
+		
+		strong {
+			font-weight: 500;
+			color: #575d5c;
+		}
+	}
+	
+	.text-center { 
+		padding-top: 8.4em;
+		
+		img {
+			max-width: 182px;
+			margin-bottom: -3.63em;
+		}
+	}
+	
+}
+
+#partners {
+	padding-top: 4em;
+	padding-bottom: 13.45em;
+	
+	h2.partners-title {
+		padding-top: 4.3em;
+		padding-bottom: 9.7em;
+	}
+	
+	#partners-wrap {
+		justify-content: center;
+		align-items: center;
+		
+		
+		a {
+		    margin: 0 4% 3.5em;
+		}
+		
+		a:nth-child(2) > img {
+			opacity: 0.5;
+		}
+		
+	}
+	
+	#pa-pride-wrap {
+		color: $button-grey;
+		font-family: $font-archer;
+		font-size: 1.125rem;
+		font-style: italic;
+		font-weight: 600;
+		text-align: center;
+		display: block;
+		margin: auto;
+		
+		img {
+			padding-bottom: 0.22em;
+		}
+	}
+}

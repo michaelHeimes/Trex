@@ -1,0 +1,335 @@
+#get-inspired-filter {
+	max-width: $content-width;
+	margin: auto;
+}
+
+.inspiration-reveal {
+    height: 91vh !important;
+    overflow: hidden !important;
+    padding: 9vh 5vw 0;	
+    width: fit-content !important;
+    
+    @include breakpoint (large up) {
+    
+	    img {
+		    height: 91vh;
+		    width: auto;
+	    }
+    }
+    
+    .close-button-wrap {
+		top: 0;
+		@include breakpoint (medium) {
+			top: 3.5vh;
+		}
+	}
+}
+
+#get-inspired {
+	max-width: $content-width;
+	margin: auto;
+		
+	.inspiration_content-wrap {
+	    button {
+	        color: #3e3e3e;
+	        padding: 1.209em 2.136em;
+	
+	        i.icon {
+	            font-size: 17px;
+	            margin-top: -0.1em;
+	        }
+	    }
+	}
+}
+
+.page-template-template-inspiration {
+	
+	#get-inspired {
+    	max-width: 86.25rem;
+		margin: 0 auto 7.7em;
+    }
+    
+    .grid-filter-container {
+    display: flex;
+    align-items: center;
+    	select {
+	    	color: $button-grey;
+	    	background-image: none;
+	    	background: transparent;
+	    	padding-left: 1em;
+	    	padding-right: 1em;
+	    	margin-left: 1em;
+	    	border: 0;
+	    	box-shadow: 0 0 0 0;
+	    	max-width: 443px;
+	    	position: relative;
+			z-index: 1;
+	    	border-bottom: 3px solid $button-grey;
+    	}
+    	&:after {
+	    	position: relative;
+	    	z-index: 0;
+			content: "\e908";
+			font-size: 2rem;
+			color: $button-grey;
+			font-family: 'theme-icons' !important;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			display: inline-block;
+			transform: rotate(90deg) translateX(-.15em) translateY(1.23em);
+		}
+    
+	}
+}
+
+#home-inspiration-link {
+	padding: 2em;
+	text-align: center;
+	width: 100%;
+	max-width: 185px;
+	margin-top: 0.5em;
+}
+
+// Masonry Grid
+// Varibles
+$masonry_width: 33.3333%;
+$masonry_height: 25%;
+$masonry_width_lg: 25%;
+$masonry_height_lg: 150px;
+
+.masonry-grid {
+    padding: 0 0.5rem;
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    #ajax-load-more {
+        .alm-btn-wrap {
+			text-align: center;
+
+            .alm-load-more-btn {
+	            cursor: pointer;
+				padding: 2em;
+				text-align: center;
+				width: 100%;
+				max-width: 185px;
+				margin-top: 3.6em;
+
+                &.done {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .grid {
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .grid-sizer,
+        .grid-item {
+            width: $masonry_width;
+            position: relative;
+
+            @include breakpoint(medium down) {
+                width: 50%;
+            }
+
+
+            @include breakpoint(smedium down) {
+                width: 100%;
+            }
+        }
+
+        .grid-item {
+	        overflow: hidden;
+            height: auto;
+            float: left;
+            border-color: #ffffff;
+            padding-top: $masonry_height;
+
+            @include breakpoint(medium down) {
+                padding-top: 25%;
+            }
+
+
+            @include breakpoint(medium down) {
+                padding-top: 32%;
+            }
+
+
+            @include breakpoint(smedium down) {
+                padding-top: 52%;
+            }
+
+
+            @include breakpoint(small down) {
+                padding-top: 62%;
+            }
+
+
+            .padding-border {
+                padding: 0.5rem;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                .image {
+	                overflow: hidden;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    left: 0;
+                    top: 0;
+                    display: inline-block;
+                    color: #ffffff;
+                    cursor: pointer;
+
+                    &.is-hover {
+                        &:hover {
+                            .overlay {
+                                opacity: 1;
+
+                                .text-container {
+                                    .title {
+                                        top: 0px;
+                                    }
+
+                                    .subtitle {
+                                        top: 0px;
+                                        opacity: 1;
+                                        transition-delay: 0.2s;
+                                    }
+
+                                    .arrow {
+                                        left: 0px;
+                                        opacity: 1;
+                                        transition-delay: 0.5s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @include breakpoint(smedium down) {
+                        &.is-hover {
+                            .overlay {
+                                opacity: 1;
+
+                                .text-container {
+                                    .title {
+                                        top: 0px;
+                                    }
+
+                                    .subtitle {
+                                        top: 0px;
+                                        opacity: 1;
+                                        transition-delay: 0.2s;
+                                    }
+
+                                    .arrow {
+                                        left: 0px;
+                                        opacity: 1;
+                                        transition-delay: 0.5s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+
+                    .overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        z-index: 0;
+						display: table;
+                        background-color: rgba(0, 0, 0, 0.3);
+                        transition: opacity 0.5s;
+
+                        .inspiration_content-wrap {
+						    text-align: left;
+						    padding: 1em;
+						    display: table-cell;
+						    vertical-align: bottom;
+						    color: #ffffff;
+						    position: relative;
+						    
+						    @include breakpoint(medium) {
+							    padding: 1em 1em 2.1em 3.55em;
+						    }
+						    
+						    p {
+							    font-size: 0.8rem;
+							    margin-bottom: 0.2em;
+							    @include breakpoint(mobile) {
+								    font-size: 0.9rem;
+								    margin-bottom: 0.8em;
+							    }
+							    @include breakpoint(medium) {
+								    font-size: 1rem;
+								    margin-bottom: 1em;
+							    }
+						    }
+
+                        }
+                    }
+                }
+            }
+
+            &.width2 {
+                width: calc(#{$masonry_width} * 2);
+
+                @include breakpoint(medium down) {
+                    width: 50%;
+                }
+
+
+                @include breakpoint(smedium down) {
+                    width: 100%;
+                }
+            }
+
+            &.height2 {
+                height: auto;
+                padding-top: calc(#{$masonry_height} * 2);
+
+                @include breakpoint(medium down) {
+                    padding-top: calc(25% * 2);
+                }
+
+
+                @include breakpoint(medium down) {
+                    padding-top: calc(30% * 2);
+                }
+
+
+                @include breakpoint(smedium down) {
+                    padding-top: 50%;
+                }
+
+
+                @include breakpoint(small down) {
+                    padding-top: 60%;
+                }
+            }
+        }
+    }
+}

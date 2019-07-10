@@ -1,0 +1,102 @@
+.home {
+
+	h2.home-models-title {
+	    padding-top: 4.4em;
+	    margin-bottom: 3.5em;
+	}
+	
+	#partners {
+	    padding-top: 0;
+	    padding-bottom: 0;
+	    margin-bottom: 10.9em;
+		background: $light-grey;
+	
+		h2.partners-title {
+			margin-bottom: 0;
+			padding-top: 6.24em;
+			padding-bottom: 10.27em;
+		}
+		
+		p {
+			padding-bottom: 6.75em;
+		}
+	}
+	
+	#get-inspired {
+		padding-top: 2em;
+		padding-bottom: 6.1em;
+		
+		@include breakpoint (medium) {
+			padding-top: 9.1em;			
+		}
+		
+		h2 {
+			padding-bottom: 2.25em;
+		}
+	}
+	
+	#been-up-to {
+		max-width: $content-width;
+		margin: auto;
+		
+		a {
+			color: $button-grey;
+			font-family: $font-archer;
+			font-size: 1.125rem;
+			font-style: italic;
+			font-weight: 600;
+			text-align: center;
+			display: block;
+			margin: auto;
+		}
+		
+		#ig-feed-wrap {
+			padding-top: 2.8em;
+    		padding-bottom: 7em;	
+			
+			.sbi-owl-nav > div {
+				font-size: 3.312rem;
+				padding: 0;
+				margin-top: -30px;
+				border-radius: 0;
+			    background: transparent;
+				box-shadow: 0 0 0 0;
+	    		border: 0;
+	    		&:before {
+			    	content: "\e915";
+			    	color: #fff;
+			    	opacity: 0.9;
+			        font-family: 'theme-icons' !important;
+				    speak: none;
+				    font-style: normal;
+				    font-weight: normal;
+				    font-variant: normal;
+				    text-transform: none;
+				    line-height: 1;
+				    -webkit-font-smoothing: antialiased;
+				    -moz-osx-font-smoothing: grayscale;
+				    display: inline-block;
+		    	}
+	    		
+	    		svg.svg-inline--fa.fa-chevron-left, svg.svg-inline--fa.fa-chevron-right {
+		    		display: none;
+	    		}
+			}
+				
+			.sbi-owl-prev {
+				margin-left: 10px;
+	    	
+
+	    	
+	    	}
+	    
+	    	.sbi-owl-next {
+				margin-right: 6px;
+				&:before {
+					transform: rotate(180deg);
+				}
+			}
+		}	
+	}
+	
+}
