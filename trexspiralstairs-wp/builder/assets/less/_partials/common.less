@@ -1,0 +1,98 @@
+main {
+}
+
+.bg-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.set-bg {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  &.bg-loaded {
+    opacity: 1;
+  }
+}
+
+.inputs li.set-bg {
+  opacity: 0;
+  transform: scale(0.75);
+  transition: all 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+  .active & {
+    opacity: 1;
+    transform: scale(1);
+    &:nth-child(1) {
+      transition-delay: 0.125s;
+    }
+    &:nth-child(2) {
+      transition-delay: 0.375s;
+    }
+    &:nth-child(3) {
+      transition-delay: 0.5s;
+    }
+    &:nth-child(4) {
+      transition-delay: 0.625s;
+    }
+  }
+}
+
+.b-lazy {
+  opacity: 0;
+  max-width: 100%;
+  transition: opacity 0.25s ease-out;
+  &.b-loaded {
+    opacity: 1;
+  }
+}
+
+[data-slick] {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+  transition-delay: 0.5s;
+  &.slick-initialized {
+    opacity: 1;
+    visibility: visible;
+  }
+  video {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%,-50%);
+    @media @mobile {
+      // z-index: -1;
+      // display: none;
+      // opacity: 0 !important;
+    }
+  }
+}
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  background: url('../img/bg-texture.jpg') no-repeat center center / cover;
+  transition: all 0.5s ease-out;
+  img {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &.preloader-out {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+  }
+}

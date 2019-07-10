@@ -1,0 +1,97 @@
+/**
+ * Forms
+ */
+
+.gform_confirmation_wrapper {
+    padding: 3em 0;
+    text-align: center;
+}
+
+select {
+    background-color: transparent;
+    outline: none;
+    font-weight: 500;
+    padding-left: 0;
+
+    option {
+        line-height: 41px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-top: 15px;
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        appearance: none !important;
+    }
+}
+
+input[type="text"], input[type="search"], input[type="email"], input[type="password"] {
+    background-color: @light-grey;
+    color: #4a4d4d;
+    border: 0;
+    outline: none;
+    font-weight: 500;
+    box-shadow: 0 0 0;
+    padding-left: 0;
+    position: relative;
+    z-index: 2;
+    //margin-top: 1.75rem;
+
+    &.is-invalid-input {
+        background-color: @light-grey;
+    }
+
+    &:focus {
+        background-color: @light-grey;
+        border: 0;
+        box-shadow: 0 0 0;
+        outline: none;
+    }
+}
+
+textarea {
+    background-color: @light-grey;
+    border: 0;
+    color: #4a4d4d;
+    outline: none;
+    font-weight: 500;
+    box-shadow: 0 0 0;
+
+    &:focus {
+        background-color: @light-grey;
+        border: 0;
+        border-bottom: 2px solid @brand-primary;
+        box-shadow: 0 0 0;
+        outline: none;
+    }
+}
+
+
+
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+  padding: 8px 10px;
+}
+
+body .gform_wrapper .top_label div.ginput_container {
+  margin-top:0;
+}
+
+.gform_button {
+  border: 1px solid #8ec549;
+  background-color: #8ec549;
+  color: #ffffff;
+  border-radius: 0;
+  padding: 1.4rem 5.174rem 1.3rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 600;
+  outline: none;
+  -webkit-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+  font-family: 'Din', sans-serif;
+
+  &:hover {
+    background-color: #9aa2a1;
+    border: 1px solid #9aa2a1;
+  }
+}
