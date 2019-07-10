@@ -1,0 +1,156 @@
+/**
+ * Takeover
+ */
+
+// takeover core
+// DO NOT CUSTOMIZE
+
+.js-no-scroll {
+    overflow: hidden !important;
+}
+
+// hide elements on takeover show
+.takeover-hide {
+    .show-takeover & {
+        display: none !important;
+    }
+}
+
+// show elements on takeover show
+.takeover-show {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+
+    .show-takeover & {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.takeover {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    visibility: hidden;
+    pointer-events: none;
+    overflow-y: auto;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+
+    &.open {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);    
+        transition: transform 0.4s, opacity 0.4s;
+    }
+
+    .admin-bar & {
+        top: 32px;
+    }
+
+    .show-takeover & {
+        pointer-events: auto;
+    }
+
+    .toggle-takeover {
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        z-index: 999;
+    }
+
+    .takeover-content {
+        height: 100%;
+    }
+
+    // Animations
+    // https://tympanus.net/Development/FullscreenOverlayStyles/index3.html.
+
+    // Huge - Overlay fades in and menu rotates slightly in perspective.
+        &.takeover-hugeinc {
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+            transition: opacity 0.5s, visibility 0s 0.5s;
+        }
+        &.takeover-hugeinc.open {
+            opacity: 1;
+            visibility: visible;
+            -webkit-transition: opacity 0.5s;
+            transition: opacity 0.5s;
+        }
+
+    // Slide down - Overlay simply slides down with the content.
+        &.takeover-slidedown {
+            visibility: hidden;
+            -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+            -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+            transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+        }
+        &.takeover-slidedown.open {
+            visibility: visible;
+            -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+            -webkit-transition: -webkit-transform 0.4s ease-in-out;
+            transition: transform 0.4s ease-in-out;
+        }
+
+    // Scale - Overlay scale up and fades in.
+        &.takeover-scale {
+            visibility: hidden;
+            opacity: 0;
+            -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+            -webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+            transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+        }
+        &.takeover-scale.open {
+            visibility: visible;
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);    
+            -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+            transition: transform 0.4s, opacity 0.4s;
+        }
+
+    // Simple Genie - Overlay scales up from down (simple genie effect).
+        &.takeover-simplegenie {
+            visibility: hidden;
+            -webkit-transform: translateY(60%) scale(0);
+            transform: translateY(60%) scale(0);
+            -webkit-transition: -webkit-transform 0.4s, visibility 0s 0.4s;
+            transition: transform 0.4s, visibility 0s 0.4s;
+        }
+        &.takeover-simplegenie.open {
+            visibility: visible;
+            -webkit-transform: translateY(0%) scale(1);
+            transform: translateY(0%) scale(1);
+            -webkit-transition: -webkit-transform 0.4s;
+            transition: transform 0.4s;
+        }
+
+
+}
+
+// Customizations for takeover
+.takeover {
+    background-color: rgba(255,255,255,0.8);
+
+    // close button
+    .toggle-takeover {
+        color: #444;
+        padding:2rem 1rem;
+    }
+
+    .takeover-content {
+        padding:2rem;
+    }
+}
