@@ -1,0 +1,64 @@
+// VARIABLES
+// ============================================
+
+//$domain-name:               '//tidal.durkancloud.com';
+//$path-to-theme:             '${domain-name}/wp-content/themes/tidal';
+
+// Typography
+	// font-size set with foundation-settings
+
+$font-archer:				'archer', sans-serif;
+$font-gotham:				'gotham', sans-serif;
+
+$font-sans:                 $font-gotham;
+$font-serif:                $font-gotham;
+$font-alt:                  $font-archer;
+
+
+// Branding
+$brand-primary:             #497F9D;
+$brand-secondary:           #6AACC4;
+$brand-white:				#F9F9F9;
+$brand-gray:                #B2B2B2;
+$brand-green:               #2E3C40;
+$brand-red:					#CC5050;
+$brand-blue:				#0066CC;
+$brand-purple:				#402B56;
+$hover-color:				#bfa779;
+
+
+// Social Colors
+$twitter:                   #00aced;
+$facebook:                  #3b5998;
+$googleplus:                #dd4b39;
+$pinterest:                 #cb2027;
+$linkedin:                  #007bb6;
+$youtube:                   #bb0000;
+$instagram:                 #517fa4;
+$snapchat:                  #fffc00;
+$tumblr:                    #32506d;
+$vine:                      #00bf8f;
+$houzz:                     #55a32a;
+
+
+// Header Settings
+$header-height:             96px;
+$header-height-mobile:      96px;
+$header-height-fixed:       65px;
+
+
+// Default Transision Mixin
+// @include global-transition;
+$trans-property:            all;
+$trans-duration:            0.25s;
+$trans-function:            ease-out;
+
+
+//Colors
+$body-color: 				#4a4d4d;
+$green: 					#8ec549;
+$button-grey: 				#9aa2a1;
+$dark-grey:					#2c2c2c;
+$light-grey: 				#f4f6f5;
+
+//Banners

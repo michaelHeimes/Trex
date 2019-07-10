@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+// mixins
+@import "_mixins/general";
+
+// variables
+@import "_base/util";
+@import "_base/foundation-settings";
+
+// vendor
+//@import "_vendor/normalize";
+@import "_vendor/foundation/foundation";
+
+	// Dev
+	// lets include it all when doing dev.
+	//@include foundation-everything(true);
+
+	// Production 
+	// comment out all foudnation features not being used on the site.
+	@include foundation-global-styles;
+	@include foundation-xy-grid-classes;
+	@include foundation-typography;
+	@include foundation-forms;
+	@include foundation-button;
+	@include foundation-accordion;
+	//@include foundation-accordion-menu;
+	//@include foundation-badge;
+	//@include foundation-breadcrumbs;
+	//@include foundation-button-group;
+	//@include foundation-callout;
+	//@include foundation-card;
+	@include foundation-close-button;
+	@include foundation-menu;
+	//@include foundation-menu-icon;
+	//@include foundation-drilldown-menu;
+	//@include foundation-dropdown;
+	//@include foundation-dropdown-menu;
+	//@include foundation-responsive-embed;
+	//@include foundation-label;
+	//@include foundation-media-object;
+	//@include foundation-off-canvas;
+	//@include foundation-orbit;
+	//@include foundation-pagination;
+	//@include foundation-progress-bar;
+	//@include foundation-slider;
+	//@include foundation-sticky;
+	@include foundation-reveal;
+	//@include foundation-switch;
+	//@include foundation-table;
+	//@include foundation-tabs;
+	//@include foundation-thumbnail;
+	//@include foundation-title-bar;
+	//@include foundation-tooltip;
+	//@include foundation-top-bar;
+	@include foundation-visibility-classes;
+	@include foundation-float-classes;
+	@include foundation-flex-classes;
+
+	// To Update...
+	// Copy over scss from github https://github.com/zurb/foundation-sites/releases
+	// make adjustments to foundation.scss
+	// make adjustments to foundation-settings.scss
+	// replace normalize-scss folder and path in _global.scss
+@import "_vendor/motion-ui"; // foundation library
+@import "_vendor/animate";
+@import "_vendor/slick";
+@import "_vendor/select2";
+@import "_vendor/takeover";
+
+// themes
+
+
+// components
+@import "_components/helper";
+@import "_components/animations";
+@import "_components/wp-overrides";
+
+// font references
+// loaded in fonts.scss
+@import "../fonts/theme-icons/variables.scss"; // keep so we can reference
+
+// sections
+@import "_sections/common";
+@import "_sections/header";
+@import "_sections/banner";
+@import "_sections/footer";
+@import "_sections/home";
+@import "_sections/forms";
+@import "_sections/models";
+@import "_sections/inspiration";
+@import "_sections/installation";
+@import "_sections/resources";
+@import "_sections/about";
+@import "_sections/contact";
